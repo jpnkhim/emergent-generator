@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: emergent-generator
+    env: docker
+    region: singapore
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        value: 8202105040:AAGALkbC7XPS2CoKCB2tWTRryjOOxuC7br4
+      - key: MONGO_URL
+        value: mongodb://localhost:27017
+      - key: DB_NAME
+        value: emergent_accounts
+      - key: CORS_ORIGINS
+        value: "*"
